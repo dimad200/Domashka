@@ -1,2 +1,2 @@
 name =='Dima'
-print(name)
+print(name, type(name))
