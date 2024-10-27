@@ -5,9 +5,7 @@ def get_matrix(n=1,m=1,value=1):
         for k in range (m):
             matrix[i].append(value)
     return matrix
-
-
-#
+# начало программы
 get_matrix()
 result1 = get_matrix(2, 2, 10)
 result2 = get_matrix(3, 5, 42)
