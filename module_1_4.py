@@ -1,6 +1,5 @@
 my_string = input("Введи текст: ")
-Dlina_stroki=len(my_string)
-print('Введенная строка: "'+my_string+'" имеет длину:', Dlina_stroki,"символа(ов)" )
+print('Введенная строка: "'+my_string+'" имеет длину:', len(my_string),"символа(ов)" )
 print("Строка в верхнем регистре: "+my_string.upper() )
 print("Строка в нижнем регистре: "+my_string.lower())
 print("Строка без пробелов: "+my_string.replace(' ',''))
