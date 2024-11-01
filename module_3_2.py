@@ -6,12 +6,12 @@ def send_email(message, recipient, sender="university.help@gmail.com"):
     else:
         flag_sobaka = True
     # Установка флага корректного получателя
-    if right_ending(".com", recipient) or right_ending(".ru", recipient) or right_ending(".net", recipient):
+    if recipient.endswith(".com") or recipient.endswith(".ru") or recipient.endswith(".net"):
         flag_recipient = True
     else:
-        flag_recipient = False
+         flag_recipient = False
     # Установка флага корректного отправителя
-    if right_ending(".com", sender) or right_ending(".ru", sender) or right_ending(".net", sender):
+    if sender.endswith(".com") or sender.endswith(".ru") or sender.endswith(".net"):
         flag_sender = True
     else:
         flag_sender = False
@@ -30,27 +30,12 @@ def send_email(message, recipient, sender="university.help@gmail.com"):
     # print(flag_sobaka, flag_recipient, flag_sender)
 
 
-# функция, которая проверит, что кончается на заданную последовательность
-def right_ending(what_looking, where_looking):
-    flag = False
-    for i in range(len(what_looking)):
-        if what_looking[-1 - i] == where_looking[-1 - i]:
-            flag = True
-        else:
-            flag = False
-            break
-    return flag
-
 
 # Собственно сама программа
-
-
+#Тесты из задания
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
-
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
-
 send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
-
 send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
 message = 'Вы видите это сообщение как лучший студент курса!'
