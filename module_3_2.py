@@ -1,15 +1,15 @@
 # Функция отправки письма
-def  send_email(message,recipient,sender = "university.help@gmail.com"):
+def send_email(message, recipient, sender="university.help@gmail.com"):
     # Установка флага собаки
-    if  not("@" in recipient and "@" in sender):
-        flag_sobaka=False
+    if not ("@" in recipient and "@" in sender):
+        flag_sobaka = False
     else:
-         flag_sobaka=True
+        flag_sobaka = True
     # Установка флага корректного получателя
-    if right_ending(".com",recipient) or right_ending(".ru",recipient) or right_ending(".net",recipient):
-         flag_recipient=True
+    if right_ending(".com", recipient) or right_ending(".ru", recipient) or right_ending(".net", recipient):
+        flag_recipient = True
     else:
-         flag_recipient=False
+        flag_recipient = False
     # Установка флага корректного отправителя
     if right_ending(".com", sender) or right_ending(".ru", sender) or right_ending(".net", sender):
         flag_sender = True
@@ -26,25 +26,34 @@ def  send_email(message,recipient,sender = "university.help@gmail.com"):
         elif sender != "university.help@gmail.com":
             print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
     else:
-        print("Невозможно отправить письмо с адреса",sender, "на адрес", recipient)
-    print(flag_sobaka, flag_recipient, flag_sender)
-
+        print("Невозможно отправить письмо с адреса", sender, "на адрес", recipient)
+    # print(flag_sobaka, flag_recipient, flag_sender)
 
 
 # функция, которая проверит, что кончается на заданную последовательность
 def right_ending(what_looking, where_looking):
-    flag=False
+    flag = False
     for i in range(len(what_looking)):
-         if what_looking[-1-i] == where_looking[-1-i]:
-             flag = True
-         else:
-             flag = False
-             break
+        if what_looking[-1 - i] == where_looking[-1 - i]:
+            flag = True
+        else:
+            flag = False
+            break
     return flag
 
 
-
-
 # Собственно сама программа
-send_email("rjn yf j,jhjl","vasya@pupkin.ru",sender = "university.help@gmail.com")
 
+
+send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+
+send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+
+send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+
+message = 'Вы видите это сообщение как лучший студент курса!'
+sender = 'urban.info@gmail.com'
+recipient = 'urban.fan@mail.ru'
+send_email(message, recipient, sender)
