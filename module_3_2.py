@@ -6,12 +6,12 @@ def send_email(message, recipient, sender="university.help@gmail.com"):
     else:
         flag_sobaka = True
     # Установка флага корректного получателя
-    if recipient.endswith(".com") or recipient.endswith(".ru") or recipient.endswith(".net"):
+    if recipient.endswith((".com",".ru","net")):
         flag_recipient = True
     else:
          flag_recipient = False
     # Установка флага корректного отправителя
-    if sender.endswith(".com") or sender.endswith(".ru") or sender.endswith(".net"):
+    if sender.endswith((".com",".ru","net")):
         flag_sender = True
     else:
         flag_sender = False
@@ -38,7 +38,8 @@ send_email('Вы видите это сообщение как лучший ст
 send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
 send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
-message = 'Вы видите это сообщение как лучший студент курса!'
-sender = 'urban.info@gmail.com'
-recipient = 'urban.fan@mail.ru'
-send_email(message, recipient, sender)
+# еще один тест для проверки, он закомментирован
+# message = 'Вы видите это сообщение как лучший студент курса!'
+# sender = 'urban.info@gmail.com'
+# recipient = 'urban.fan@mail.ru'
+# send_email(message, recipient,sender)
