@@ -14,8 +14,8 @@ print_params(c = [1,2,3])
 # 2.Распаковка параметров:
 # Создайте список values_list с тремя элементами разных типов.
 values_list = [36.6, "2 слона", True]
-values_dict = { "a":2, "b":"Авокадо", "c":False }
 # Создайте словарь values_dict с тремя ключами, соответствующими параметрам функции print_params, и значениями разных типов.
+values_dict = { "a":2, "b":"Авокадо", "c":False }
 # Передайте values_list и values_dict в функцию print_params, используя распаковку параметров (* для списка и ** для словаря).
 print_params(*values_list)
 print_params(**values_dict)
