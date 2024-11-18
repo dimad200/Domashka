@@ -4,6 +4,8 @@
 def get_multiplied_digits(number=0):
   str_number = str(number)
   first=int(str_number[0])
+  if first ==0:
+    return 1
   if len(str_number)<2:
     return first
   else:
@@ -12,6 +14,7 @@ def get_multiplied_digits(number=0):
 result = get_multiplied_digits(40203)
 
 print(result)
+
 
 # Вывод на консоль:
 # 24
