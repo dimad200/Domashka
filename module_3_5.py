@@ -14,7 +14,7 @@ def get_multiplied_digits(number=0):
   else:
     return first * get_multiplied_digits(int(str_number[1:]))
 
-result = get_multiplied_digits(40203)
+result = get_multiplied_digits(100000)
 
 print(result)
 
